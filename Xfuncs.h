@@ -1,5 +1,5 @@
 /*
- * $XdotOrg: xc/include/Xfuncs.h,v 1.1.4.3.2.1 2004/03/04 17:46:21 eich Exp $
+ * $XdotOrg: xc/include/Xfuncs.h,v 1.2 2004/04/23 18:43:05 eich Exp $
  * $Xorg: Xfuncs.h,v 1.4 2001/02/09 02:03:22 xorgcvs Exp $
  * 
  * 
