@@ -1,6 +1,7 @@
 /*
  * O/S-dependent (mis)feature macro definitions
  *
+ * $XdotOrg: xc/include/Xosdefs.h,v 1.1.4.2.4.1 2004/03/04 17:46:21 eich Exp $
  * $Xorg: Xosdefs.h,v 1.5 2001/02/09 02:03:23 xorgcvs Exp $
  *
 Copyright 1991, 1998  The Open Group
@@ -76,6 +77,15 @@ in this Software without prior written authorization from The Open Group.
 #ifdef SYSV /* (release 3.2) */
 #define X_NOT_POSIX
 #define X_NOT_STDC_ENV
+#endif
+#endif
+
+#ifdef _SCO_DS
+#ifndef SCO
+#define SCO
+#endif
+#ifndef SCO325
+#define SCO325
 #endif
 #endif
 

@@ -1,4 +1,5 @@
 /*
+ * $XdotOrg: xc/include/Xfuncs.h,v 1.1.4.3.2.1 2004/03/04 17:46:21 eich Exp $
  * $Xorg: Xfuncs.h,v 1.4 2001/02/09 02:03:22 xorgcvs Exp $
  * 
  * 
@@ -40,13 +41,16 @@ void bcopy();
 void bzero();
 int bcmp();
 #else
-#if defined(SYSV)
+#if defined(SYSV) && !defined(SCO325) && !defined(sun)
 #include <memory.h>
 void bcopy();
 #define bzero(b,len) memset(b, 0, len)
 #define bcmp(b1,b2,len) memcmp(b1, b2, len)
 #else
 #include <string.h>
+#if defined(SCO325) || defined(sun)
+#include <strings.h>
+#endif
 #define _XFUNCS_H_INCLUDED_STRING_H
 #define bcopy(b1,b2,len) memmove(b2, b1, (size_t)(len))
 #define bzero(b,len) memset(b, 0, (size_t)(len))
