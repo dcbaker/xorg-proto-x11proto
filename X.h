@@ -304,6 +304,9 @@ are reserved in the protocol for errors and replies. */
 #define FamilyChaos		2
 #define FamilyInternet6		6	/* IPv6 */
 
+/* authentication families not tied to a specific protocol */
+#define FamilyServerInterpreted 5
+
 /* Property notification */
 
 #define PropertyNewValue	0

@@ -1,7 +1,7 @@
 /*
  * O/S-dependent (mis)feature macro definitions
  *
- * $XdotOrg: Xosdefs.h,v 1.5 2001/02/09 02:03:23 xorgcvs Exp $
+ * $XdotOrg: xc/include/Xosdefs.h,v 1.2 2004/04/23 18:43:05 eich Exp $
  * $Xorg: Xosdefs.h,v 1.5 2001/02/09 02:03:23 xorgcvs Exp $
  *
 Copyright 1991, 1998  The Open Group
