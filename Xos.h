@@ -1,5 +1,5 @@
 /*
- * $XdotOrg: Xos.h,v 1.6 2001/02/09 02:03:22 xorgcvs Exp $
+ * $XdotOrg: xc/include/Xos.h,v 1.1.4.3 2003/12/20 00:28:21 kaleb Exp $
  * $Xorg: Xos.h,v 1.6 2001/02/09 02:03:22 xorgcvs Exp $
  * 
  * 
@@ -93,6 +93,9 @@ in this Software without prior written authorization from The Open Group.
 #ifdef SCO325
 #include <strings.h>
 #else
+#if (defined(sun) && defined(__SVR4))
+#include <strings.h>
+#endif
 #ifdef __STDC__
 #ifndef index
 #define index(s,c) (strchr((s),(c)))
