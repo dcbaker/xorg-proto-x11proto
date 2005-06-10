@@ -61,10 +61,8 @@ in this Software without prior written authorization from The Open Group.
 #endif
 #endif /* USG */
 
-#ifndef sgi
-#if defined(SCO325) || defined(__USLC__)
+#if defined(__SCO__) || defined(__UNIXWARE__)
 #include <stdint.h>
-#endif
 #endif
 
 #ifdef _SEQUENT_
@@ -92,7 +90,7 @@ in this Software without prior written authorization from The Open Group.
 #ifndef X_NOT_STDC_ENV
 
 #include <string.h>
-#ifdef SCO325
+#ifdef __SCO__
 #include <strings.h>
 #else
 #if (defined(sun) && defined(__SVR4))

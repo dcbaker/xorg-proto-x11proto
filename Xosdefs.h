@@ -81,18 +81,16 @@ in this Software without prior written authorization from The Open Group.
 #endif
 
 #ifdef _SCO_DS
-#ifndef SCO
-#define SCO
-#endif
-#ifndef SCO325
-#define SCO325
+#ifndef __SCO__
+#define __SCO__
 #endif
 #endif
 
 #ifdef i386
 #ifdef SYSV
-#if !defined(ISC) && !defined(SCO) && !defined(_SEQUENT_) && !defined(sun)
-#if !defined(_POSIX_SOURCE) && !defined(_SCO_DS)
+#if !defined(ISC) && !defined(__SCO__) && !defined(_SEQUENT_) && \
+	!defined(__UNIXWARE__) && !defined(sun)
+#if !defined(_POSIX_SOURCE)
 #define X_NOT_POSIX
 #endif
 #define X_NOT_STDC_ENV
