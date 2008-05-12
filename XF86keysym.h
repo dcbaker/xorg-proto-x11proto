@@ -100,7 +100,7 @@
 #define XF86XK_Finance		0x1008FF3C   /* Display financial site      */
 #define XF86XK_Community	0x1008FF3D   /* Display user's community    */
 #define XF86XK_AudioRewind	0x1008FF3E   /* "rewind" audio track        */
-#define XF86XK_XF86BackForward	0x1008FF3F   /* ??? */
+#define XF86XK_BackForward	0x1008FF3F   /* ??? */
 #define XF86XK_Launch0		0x1008FF40   /* Launch Application          */
 #define XF86XK_Launch1		0x1008FF41   /* Launch Application          */
 #define XF86XK_Launch2		0x1008FF42   /* Launch Application          */
@@ -127,7 +127,7 @@
 #define XF86XK_Close		0x1008FF56   /* Close window                */
 #define XF86XK_Copy		0x1008FF57   /* Copy selection              */
 #define XF86XK_Cut		0x1008FF58   /* Cut selection               */
-#define XF86XK_Display		0x1008FF59   /* ??                          */
+#define XF86XK_Display		0x1008FF59   /* Output switch key           */
 #define XF86XK_DOS		0x1008FF5A   /* Launch DOS (emulation)      */
 #define XF86XK_Documents	0x1008FF5B   /* Open documents window       */
 #define XF86XK_Excel		0x1008FF5C   /* Launch spread sheet         */
