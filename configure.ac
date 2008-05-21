@@ -2,6 +2,8 @@ AC_PREREQ([2.57])
 AC_INIT([Xproto], [7.0.12], [https://bugs.freedesktop.org/enter_bug.cgi?product=xorg])
 AM_INIT_AUTOMAKE([foreign dist-bzip2])
 
+AC_MSG_ERROR([This branch has been merged. Please use the master branch instead.])
+
 AC_CONFIG_HEADER([do-not-use-config.h])
 AC_CONFIG_HEADER([Xfuncproto.h])
 
