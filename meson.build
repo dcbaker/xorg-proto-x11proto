@@ -135,33 +135,6 @@ else
   config.set('NARROWPROTO', ['linux', 'bsd'].contains(host_machine.system()))
 endif
 
-include_path = join_paths(get_option('includedir'), 'X11')
-
-configure_file(
-  input : 'Xfuncproto.h.meson',
-  output : '@BASENAME@',
-  configuration : config,
-  install : true,
-  install_dir : include_path
-)
-
-configure_file(
-  input : 'Xpoll.h.in',
-  output : '@BASENAME@',
-  configuration : config,
-  install : true,
-  install_dir : include_path
-)
-
-install_headers(
-  'ap_keysym.h', 'DECkeysym.h', 'HPkeysym.h', 'keysymdef.h', 'keysym.h',
-  'Sunkeysym.h', 'Xalloca.h', 'Xarch.h', 'Xatom.h', 'Xdefs.h', 'XF86keysym.h',
-  'Xfuncs.h', 'X.h', 'Xmd.h', 'Xosdefs.h', 'Xos.h', 'Xos_r.h', 'Xproto.h',
-  'Xprotostr.h', 'Xthreads.h', 'Xw32defs.h', 'XWDFile.h', 'Xwindows.h',
-  'Xwinsock.h',
-  subdir : 'X11',
-)
-
 pkg = import('pkgconfig')
 pkg.generate(
   name : 'Xproto',
@@ -169,3 +142,5 @@ pkg.generate(
   description : 'Xproto headers',
   version : meson.project_version(),
 )
+
+subdir('include/X11')
