@@ -144,3 +144,7 @@ pkg.generate(
 )
 
 subdir('include/X11')
+
+ext_xproto = declare_dependency(
+  include_directories : include_directories('include'),
+)
