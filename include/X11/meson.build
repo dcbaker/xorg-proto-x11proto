@@ -29,7 +29,7 @@ configure_file(
 )
 
 configure_file(
-  input : 'Xpoll.h.in',
+  input : '../../Xpoll.h.in',
   output : '@BASENAME@',
   configuration : config,
   install : true,
