@@ -70,13 +70,13 @@ else
   endif
 endif
 
-_vaproto = get_option('varargs-prototypes')
-if _vaproto == 'true'
-  with_vaproto = true
-elif _vaproto == 'false'
-  with_vaproto = false
+_varproto = get_option('varargs-prototypes')
+if _varproto == 'true'
+  with_varproto = true
+elif _varproto == 'false'
+  with_varproto = false
 else
-  with_vaproto = not ['darwin', 'windows'].contains(host_machine.system())
+  with_varproto = not ['darwin', 'windows'].contains(host_machine.system())
 endif
 
 _nestedproto = get_option('nested-prototypes')
@@ -110,17 +110,17 @@ else
   endif
 endif
 
-if with_vaproto and with_funcproto and with_nestedproto and with_constproto
+if with_varproto and with_funcproto and with_nestedproto and with_constproto
   config.set('FUNCPROTO', 15)
-elif with_funcproto and with_vaproto and with_nestedproto
+elif with_funcproto and with_varproto and with_nestedproto
   config.set('FUNCPROTO', 11)
 elif with_funcproto and with_nestedproto
   config.set('FUNCPROTO', 9)
-elif with_funcproto and with_vaproto and with_constproto
+elif with_funcproto and with_varproto and with_constproto
   config.set('FUNCPROTO', 7)
 elif with_funcproto and with_nestedproto
   config.set('FUNCPROTO', 5)
-elif with_funcproto and with_vaproto
+elif with_funcproto and with_varproto
   config.set('FUNCPROTO', 3)
 elif with_funcproto
   config.set('FUNCPROTO', false)  # XXX: is this correct?
